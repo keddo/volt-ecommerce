@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.env
+.env.test
+.env.*.local
+*.log
+.DS_Store
+coverage/
+apps/api/prisma/dev.db
+apps/api/uploads/
+.vscode/*
+!.vscode/extensions.json
+test-results/
+playwright-report/
