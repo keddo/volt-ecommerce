@@ -18,6 +18,8 @@ export interface StorageAdapter {
   delete(storedPath: string): Promise<void>;
 }
 
+// In production this resolves to /app/apps/api/uploads - a Railway volume is mounted there so
+// uploads survive redeploys (the container filesystem is otherwise wiped on every deploy).
 const UPLOADS_DIR = path.join(__dirname, "../../uploads");
 
 function sanitizeFileName(name: string): string {
